@@ -12,6 +12,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   gem 'byebug'
+  gem 'pry'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers', require: false
 end
 
 group :development do

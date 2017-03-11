@@ -35,8 +35,8 @@ ActiveRecord::Schema.define(version: 20170311192303) do
   end
 
   create_table "tracks", force: :cascade do |t|
-    t.string  "name",       null: false
-    t.integer "station_id", null: false
+    t.integer "external_identifier", null: false
+    t.integer "station_id",          null: false
   end
 
   create_table "trips", force: :cascade do |t|
