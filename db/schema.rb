@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20170311192303) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "departures", force: :cascade do |t|
     t.integer  "lateness",      default: 0
     t.datetime "scheduledtime"
@@ -24,7 +27,7 @@ ActiveRecord::Schema.define(version: 20170311192303) do
   end
 
   create_table "stations", force: :cascade do |t|
-    t.string "CreateStations", null: false
+    t.string "name", null: false
   end
 
   create_table "statuses", force: :cascade do |t|
@@ -42,6 +45,6 @@ ActiveRecord::Schema.define(version: 20170311192303) do
     t.integer "destination_id",      null: false
   end
 
-  add_index "trips", ["external_identifier"], name: "index_trips_on_external_identifier", unique: true
+  add_index "trips", ["external_identifier"], name: "index_trips_on_external_identifier", unique: true, using: :btree
 
 end
