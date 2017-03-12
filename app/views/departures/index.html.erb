@@ -1,5 +1,7 @@
+<!-- <%= react_component('DeparturesBoard', departures: @departures, prerender: true) %>
+<%= react_component('DeparturesBoard', {departures: @departures}, {prerender: true}) %>
 <ul>
   <% @departures.each do |departure| %>
     <li><%= departure.id.to_s %></li>
   <% end %>
-</ul>
+</ul> -->
