@@ -1,0 +1,15 @@
+@import 'scss-variables';
+
+.table{
+  margin: 0 auto;
+  th {
+    color: $white-texts;
+  }
+  td {
+    padding: 0px 15px;
+    text-align: center;
+    &.td-status {
+      color: $status-texts
+    }
+  }
+}

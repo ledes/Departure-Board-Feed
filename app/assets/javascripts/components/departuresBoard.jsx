@@ -39,19 +39,21 @@ var DeparturesBoard = React.createClass({
 
   render: function() {
     return (
-      <div>
-        <div className={'top-info'}>
-          <div className='current-day-box'>
-            <div>{this.renderDayOfTheWeek()}</div>
-            <div>{this.renderFormadtedDated()}</div>
+      <div id='departures-board-page'>
+        <div className='board'>
+          <div className={'top-info'}>
+            <div className='top-container'>
+              <div>{this.renderDayOfTheWeek()}</div>
+              <div>{this.renderFormadtedDated()}</div>
+            </div>
+            <div className='central-top-container'>Departures Board</div>
+            <div className='top-container'>
+              <div>Current Time</div>
+              <div>{this.renderCurrentTime()}</div>
+            </div>
           </div>
-          <div>Departures Board</div>
-          <div className='current-time-box'>
-            <div>Current Time</div>
-            <div>{this.renderCurrentTime()}</div>
-          </div>
+          <Table headers={this.tableHeaders()} rows={this.props.tableData}/>
         </div>
-        <div><Table headers={this.tableHeaders()} rows={this.props.tableData}/></div>
       </div>
     );
   }
