@@ -15,7 +15,11 @@ var Table = React.createClass({
     return (
       <tr key={row.id}>
         {_.map(this.props.headers, function(columnName, idx){
-          return (<td key={idx}>{row[columnName.toLowerCase()]}</td>);
+          return (
+            <td key={idx} className={'td-' + columnName.toLowerCase()}>
+              {row[columnName.toLowerCase()]}
+            </td>
+          );
         })}
       </tr>
     );
@@ -23,7 +27,7 @@ var Table = React.createClass({
 
   render: function() {
     return (
-      <table className="departures-table">
+      <table className="table">
         <thead><tr>{_.map(this.props.headers, this.renderHeaderCell)}</tr></thead>
         <tbody>{_.map(this.props.rows, this.renderRow)}</tbody>
       </table>
