@@ -1,7 +1,8 @@
 class DeparturesController < ApplicationController
 
   def index
-    tableData = Departure.all.map do |departure|
+    sorted_departures = Departure.all.sort_by{ |departure| departure.time }
+    table_data = sorted_departures.map do |departure|
       trip = departure.trip
       destination = Station.find(trip.destination_id)
       origin = Station.find(trip.origin_id)
@@ -16,7 +17,7 @@ class DeparturesController < ApplicationController
       }
     end
 
-    render component: 'DeparturesBoard', props: { tableData: tableData }, class: 'departures-board'
+    render component: 'DeparturesBoard', props: { tableData: table_data }, class: 'departures-board'
   end
 
 end
