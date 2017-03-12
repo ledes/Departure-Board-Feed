@@ -12,7 +12,7 @@ class DeparturesController < ApplicationController
         destination: destination.name,
         trip: trip.external_identifier,
         track: track,
-        time: departure.time,
+        time: departure.time.strftime("%I:%M %p"),
         status: departure.status.name
       }
     end
