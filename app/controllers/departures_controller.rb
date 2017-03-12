@@ -16,7 +16,7 @@ class DeparturesController < ApplicationController
       }
     end
 
-    render component: 'DeparturesBoard', props: { tableData: tableData }, tag: 'span', class: 'departures-board'
+    render component: 'DeparturesBoard', props: { tableData: tableData }, class: 'departures-board'
   end
 
 end
