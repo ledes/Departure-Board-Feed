@@ -1,27 +1,36 @@
 @import 'scss-variables';
 
-#departures-board-page .board {
+#departures-board-page {
   width: $board-width;
   min-width: 600px;
   margin: 0 auto;
-  padding: 20px 40px;
-  border-radius: 10px;
-  background: $board-background-color;
-  color: $board-font-color;
-  font-family: $font;
-  font-size: $board-font-size;
 
-  .top-info {
-    display: flex;
-    text-align: center;
-    padding: 20px;
-    .top-container{
-      width: 20%;
-    }
-    .central-top-container{
-      font-size: $central-title-font-size;
-      width: 60%;
-      color: $white-texts;
+  #station-tab {
+    display: inline-flex;
+    list-style: none;
+    margin-bottom: 20px;
+  }
+
+  .board {
+    padding: 20px 40px;
+    border-radius: 10px;
+    background: $board-background-color;
+    color: $board-font-color;
+    font-family: $font;
+    font-size: $board-font-size;
+
+    .top-info {
+      display: flex;
+      text-align: center;
+      padding: 20px;
+      .top-container{
+        width: 20%;
+      }
+      .central-top-container{
+        font-size: $central-title-font-size;
+        width: 60%;
+        color: $white-texts;
+      }
     }
   }
 }

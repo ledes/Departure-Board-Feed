@@ -11,5 +11,8 @@
     &.td-status {
       color: $status-texts
     }
+    &.td-destination {
+      text-align: left;
+    }
   }
 }

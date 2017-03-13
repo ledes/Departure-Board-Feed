@@ -11,7 +11,7 @@ var DeparturesBoard = React.createClass({
   },
 
   tableHeaders: function() {
-    return (['Time', 'Origin', 'Trip', 'Destination', 'Track', 'Status']);
+    return (['Time', 'Trip', 'Destination', 'Track', 'Status']);
   },
 
   //=== Dates and Time ===
@@ -41,6 +41,15 @@ var DeparturesBoard = React.createClass({
   },
 
   //=== Filters ===
+  renderFilterTabs: function(){
+    return (
+      <ul id='station-tab'>
+        <li><a onClick={_.partial(this.onAction, {action: 'SEE_NORTH_STATION'})}>North Station</a></li>
+        <li><a onClick={_.partial(this.onAction, {action: 'SEE_SOUTH_STATION'})}>South Station</a></li>
+      </ul>
+    );
+  },
+
   filterOrigin: function() {
     var state = this.state;
     return _.filter(this.props.tableData, function(trip){
@@ -48,10 +57,29 @@ var DeparturesBoard = React.createClass({
     })
   },
 
+  onAction: function(payload) {
+    switch (payload.action) {
+      case "SEE_NORTH_STATION":
+        if (this.state.origin === 'South Station') {
+          this.setState({origin: 'North Station'});
+        }
+        break;
+      case "SEE_SOUTH_STATION":
+        if (this.state.origin === 'North Station') {
+          this.setState({origin: 'South Station'});
+        }
+        break;
+      default:
+        console.warn("Caution! Action '" + payload.action + "' was not handled.");
+
+    }
+  },
+
   //=== Render ===
   render: function() {
     return (
       <div id='departures-board-page'>
+        {this.renderFilterTabs()}
         <div className='board'>
           <div className={'top-info'}>
             <div className='top-container'>
