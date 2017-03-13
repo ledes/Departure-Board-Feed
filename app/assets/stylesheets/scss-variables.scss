@@ -1,5 +1,6 @@
 // colors
-$board-background-color: transparentize(#000000, 0.15);
+$dark-black-color: transparentize(#000000, 0.15);
+$light-black-color: transparentize(#000000, 0.5);
 $board-font-color: transparentize(#FFFF00, 0.3);
 $white-texts: transparentize(#ffffff, 0.2);
 $status-texts: transparentize(#008000, 0.3);
@@ -7,5 +8,5 @@ $status-texts: transparentize(#008000, 0.3);
 // fonts
 $font: 'VT323';
 $board-font-size: 1.4em;
-$central-title-font-size: 38px;
-$board-width: 80%;
+$central-title-font-size: 31px;
+$board-width: 65%;
