@@ -42,10 +42,14 @@ var DeparturesBoard = React.createClass({
 
   //=== Filters ===
   renderFilterTabs: function(){
+    var state = this.state;
+    var tabs =['North Station', 'South Station'];
     return (
       <ul id='station-tab'>
-        <li><a onClick={_.partial(this.onAction, {action: 'SEE_NORTH_STATION'})}>North Station</a></li>
-        <li><a onClick={_.partial(this.onAction, {action: 'SEE_SOUTH_STATION'})}>South Station</a></li>
+        <li><a className={'tab north-tab ' + (state.origin === 'North Station' ? 'active-tab' : "")}
+               onClick={_.partial(this.onAction, {action: 'SEE_NORTH_STATION'})}>North Station</a></li>
+        <li><a className={'tab south-tab ' + (state.origin === 'South Station' ? 'active-tab' : "")}
+               onClick={_.partial(this.onAction, {action: 'SEE_SOUTH_STATION'})}>South Station</a></li>
       </ul>
     );
   },

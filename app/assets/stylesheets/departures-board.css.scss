@@ -1,6 +1,7 @@
 @import 'scss-variables';
 
 #departures-board-page {
+  font-family: $font;
   width: $board-width;
   min-width: 600px;
   margin: 0 auto;
@@ -8,15 +9,29 @@
   #station-tab {
     display: inline-flex;
     list-style: none;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    padding-left: 0px;
+    color: $white-texts;
+  }
+  .tab {
+    background: $light-black-color;
+    padding: 6px;
+  }
+  .north-tab {
+    border-radius: 5px 0px 0px 5px;
+  }
+  .south-tab {
+    border-radius: 0px 5px 5px 0px;
+  }
+  .active-tab {
+    background: $dark-black-color;
   }
 
   .board {
     padding: 20px 40px;
     border-radius: 10px;
-    background: $board-background-color;
+    background: $dark-black-color;
     color: $board-font-color;
-    font-family: $font;
     font-size: $board-font-size;
 
     .top-info {
