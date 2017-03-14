@@ -32,3 +32,6 @@ A simple ReactJs and Rails application that shows the train departure times from
 * `rake db:migrate`
 * `rake db:seed`
 * `rails s`
+
+## Run the tests
+`rspec spec`
