@@ -1,8 +1,14 @@
 class DeparturesController < ApplicationController
 
   def index
+    @table_data = format_data
+  end
+
+  private
+
+  def format_data
     sorted_departures = Departure.all.sort_by{ |departure| departure.time }
-    @table_data = sorted_departures.map do |departure|
+    table_data = sorted_departures.map do |departure|
       trip = departure.trip
       destination = Station.find(trip.destination_id)
       origin = Station.find(trip.origin_id)
@@ -17,5 +23,4 @@ class DeparturesController < ApplicationController
       }
     end
   end
-
 end
