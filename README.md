@@ -21,7 +21,7 @@ A simple ReactJs and Rails application that shows the train departure times from
 
 ## Future Implementations
 *  Feed real data using MBTA APIs
-*  Limit the trips to the only the ones in the next hour
+*  Limit the trips to show only the ones in the next hour
 *  Add different colors to the different statuses
 *  Add filters by columns
 
