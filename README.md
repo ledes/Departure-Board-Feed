@@ -3,14 +3,15 @@
 [Click Here To View Heroku Application](https://arcane-reaches-51102.herokuapp.com/)
 
 ## Description
-A simple ReactJs and Rails application that shows the train departure times from the North Station and South Station of Boston. The style applied has been done to give it a retro look and also to emulate the departure boards from train/airport stations. For instance: [departure board](https://upload.wikimedia.org/wikipedia/commons/4/43/North_Station_departure_board.JPG)
+This is a mini project built in a weekend with ReactJs and Ruby on Rails that shows the train departure times from the North Station and South Station of Boston using fake data. The idea behind this project was building a small project with a different look and that it could evolve into an mobile app that uses real data from the MBTA.
+The style applied has been done to give it a retro look and also to emulate the departure boards from train/airport stations.
 
 ## Ruby version
 *2.2.3*
 
 #### Technical Specifications
 - Ruby on Rails. Ruby
-- React Js. Javascript
+- React Js. Javascript ES5
 - PostgreSQL
 - HTML
 - SASS
@@ -24,6 +25,7 @@ A simple ReactJs and Rails application that shows the train departure times from
 *  Limit the trips to show only the ones in the next hour
 *  Add different colors to the different statuses
 *  Add filters by columns
+*  React Native app
 
 ## Use this repo locally
 * Clone the repository
