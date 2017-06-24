@@ -22,7 +22,7 @@ The style applied has been done to give it a retro look and also to emulate the 
 ![ERDiagram](http://i.imgur.com/LE2LeQy.png)
 
 ## Future Implementations
-*  React Native app (visit [link](https://github.com/ledes/retro-MBTA)
+*  React Native app (visit [link](https://github.com/ledes/retro-MBTA))
 *  Feed real data using MBTA APIs
 *  Limit the trips to show only the ones in the next hour
 *  Add different colors to the different statuses
